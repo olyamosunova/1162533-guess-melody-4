@@ -43,5 +43,4 @@ GameScreen.propTypes = {
   ]).isRequired,
 };
 
-
 export default GameScreen;
