@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import WelcomeScreen from "../welcome-screen/welcome-screen.jsx";
+import GameScreen from "../game-screen/game-screen.jsx";
 import QuestionArtist from "../question-artist/question-artist.jsx";
 import QuestionGenre from "../question-genre/question-genre.jsx";
 import {GameType} from "../../const.js";
@@ -39,25 +40,29 @@ class App extends PureComponent {
       switch (question.type) {
         case GameType.ARTIST:
           return (
-            <QuestionArtistWrapped
-              question={question}
-              onAnswer={() => {
-                this.setState((prevState) => ({
-                  step: prevState.step + 1,
-                }));
-              }}
-            />
+            <GameScreen type={question.type}>
+              <QuestionArtistWrapped
+                question={question}
+                onAnswer={() => {
+                  this.setState((prevState) => ({
+                    step: prevState.step + 1,
+                  }));
+                }}
+              />
+            </GameScreen>
           );
         case GameType.GENRE:
           return (
-            <QuestionGenreWrapped
-              question={question}
-              onAnswer={() => {
-                this.setState((prevState) => ({
-                  step: prevState.step + 1,
-                }));
-              }}
-            />
+            <GameScreen type={question.type}>
+              <QuestionGenreWrapped
+                question={question}
+                onAnswer={() => {
+                  this.setState((prevState) => ({
+                    step: prevState.step + 1,
+                  }));
+                }}
+              />
+            </GameScreen>
           );
       }
     }
