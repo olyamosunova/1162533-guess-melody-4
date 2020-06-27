@@ -5,23 +5,23 @@ export const questions = [
     type: `genre`,
     genre: `rock`,
     answers: [{
-      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/d/d7/Bass_chorus_sound_1_%28new_wave_post-punk%29.ogg`,
       genre: `rock`,
     }, {
-      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/7/7b/12barBlues002.ogg`,
       genre: `blues`,
     }, {
-      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/5/59/Acoustic_Jazz_Quartet_no1_%28exploration%29.flac`,
       genre: `jazz`,
     }, {
-      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
-      genre: `rock`,
+      src: `http://beloweb.ru/audio/dillon_-_thirteen_thirtyfive_.mp3`,
+      genre: `pop`,
     }],
   }, {
     type: `artist`,
     song: {
       artist: `Jim Beam`,
-      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/2/2e/BlueMoonOfKentucky.ogg`,
     },
     answers: [{
       picture: `${AVATAR_URL}/${Math.random()}`,
