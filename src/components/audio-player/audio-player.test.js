@@ -13,17 +13,18 @@ const mock = {
 it(`AudioPlayer is rendered correctly`, () => {
   const {song} = mock;
 
-  const tree = renderer.create((
-    <AudioPlayer
-      isPlaying={isPlaying}
-      onPlayButtonClick={() => {}}
-      src={song.src}
-    />
-  ), {
-    createNodeMock: () => {
-      return {};
-    }
-  }).toJSON();
+  const tree = renderer.create(
+      <AudioPlayer
+        isPlaying={isPlaying}
+        isLoading={true}
+        onPlayButtonClick={() => {}}
+        src={song.src}
+      >
+        <audio />
+      </AudioPlayer>, {
+        createNodeMock: () => {
+          return {};
+        }}).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
